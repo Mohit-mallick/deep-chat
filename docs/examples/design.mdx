@@ -1,0 +1,109 @@
+---
+sidebar_position: 0
+---
+
+# Design
+
+Examples to help you get started in styling your Deep Chat component.
+
+### Simple Chat Design
+
+A clean and modern chat design with custom styling.
+
+import ComponentContainer from '@site/src/components/table/componentContainer';
+import DeepChatBrowser from '@site/src/components/table/deepChatBrowser';
+import CodeToggle from '@site/src/components/toggle/codeToggle';
+import LineBreak from '@site/src/components/markdown/lineBreak';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
+
+{() => require('@site/src/components/nav/autoNavToggle').readdAutoNavShadowToggle()}
+
+<ComponentContainer>
+  <DeepChatBrowser
+    style={{borderRadius: '10px'}}
+    messageStyles={{
+      default: {
+        ai: {
+          bubble: {
+            backgroundColor: "#f7f7f8",
+            color: "#1c1e21"
+          }
+        },
+        user: {
+          bubble: {
+            backgroundColor: "#0d5297",
+            color: "white"
+          }
+        }
+      }
+    }}
+    textInput={{
+      placeholder: {text: "Send a message..."}
+    }}
+    submitButtonStyles={{
+      submit: {
+        container: {
+          default: {backgroundColor: "#19c37d"},
+          hover: {backgroundColor: "#0bab69"}
+        }
+      }
+    }}
+    history={[
+      {text: "Hi! How can I help you today?", role: "ai"},
+      {text: "Tell me about yourself", role: "user"},
+      {text: "I am a chat component created by Mohit Mallick", role: "ai"}
+    ]}
+    demo={true}
+    connect={{stream: true}}
+  />
+</ComponentContainer>
+
+<CodeToggle>
+<TabItem value="js" label="Show code">
+
+```html
+<!-- This example is for Vanilla JS and should be tailored to your framework (see Frameworks) -->
+
+<deep-chat
+  style="border-radius: 10px"
+  messageStyles='{
+    "default": {
+      "ai": {
+        "bubble": {
+          "backgroundColor": "#f7f7f8",
+          "color": "#1c1e21"
+        }
+      },
+      "user": {
+        "bubble": {
+          "backgroundColor": "#0d5297",
+          "color": "white"
+        }
+      }
+    }
+  }'
+  textInput='{
+    "placeholder": {"text": "Send a message..."}
+  }'
+  submitButtonStyles='{
+    "submit": {
+      "container": {
+        "default": {"backgroundColor": "#19c37d"},
+        "hover": {"backgroundColor": "#0bab69"}
+      }
+    }
+  }'
+  history='[
+    {"text": "Hi! How can I help you today?", "role": "ai"},
+    {"text": "Tell me about yourself", "role": "user"},
+    {"text": "I am a chat component created by Mohit Mallick", "role": "ai"}
+  ]'
+  demo="true"
+  connect='{"stream": true}'
+></deep-chat>
+```
+
+</TabItem>
+</CodeToggle>

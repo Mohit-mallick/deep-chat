@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deep Chat - Next.js App Router Example</title>
+    <script src="https://unpkg.com/next"></script>
+    <script src="https://unpkg.com/deep-chat-react"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      "use client";
+      
+      import dynamic from 'next/dynamic';
+      
+      const DeepChat = dynamic(() => import('deep-chat-react'), { ssr: false });
+      
+      export default function Page() {
+        return (
+          <DeepChat
+            style={{ borderRadius: '10px' }}
+            initialMessages={[
+              { role: 'user', text: 'Hello!' },
+              { role: 'assistant', text: 'Hi! How can I help you today?' }
+            ]}
+          />
+        );
+      }
+    </script>
+  </body>
+</html> 

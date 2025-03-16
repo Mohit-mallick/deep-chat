@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deep Chat - Svelte Example</title>
+    <script src="https://unpkg.com/svelte"></script>
+    <script src="https://unpkg.com/deep-chat"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      const app = new Svelte({
+        target: document.getElementById('app'),
+        props: {
+          component: 'deep-chat',
+          props: {
+            style: { borderRadius: '10px' },
+            initialMessages: [
+              { role: 'user', text: 'Hello!' },
+              { role: 'assistant', text: 'Hi! How can I help you today?' }
+            ]
+          }
+        }
+      });
+    </script>
+  </body>
+</html> 

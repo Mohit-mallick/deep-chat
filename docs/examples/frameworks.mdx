@@ -1,0 +1,67 @@
+---
+sidebar_position: 1
+---
+
+# Frameworks
+
+The following frameworks/libraries can be used to implement Deep Chat.
+
+import reactLogo from '/img/reactLogo.png';
+import vueLogo from '/img/vueLogo.png';
+import svelteLogo from '/img/svelteLogo.png';
+import angularLogo from '/img/angularLogo.png';
+import solidLogo from '/img/solidLogo.png';
+import nextLogo from '/img/nextLogo.png';
+import nuxtLogo from '/img/nuxtLogo.png';
+import vanillaJSLogo from '/img/vanillaJSLogo.png';
+
+<img src={reactLogo} width="30" style={{float: 'left', marginRight: '10px', marginTop: '26px'}} />
+
+## React
+
+Make sure to use the `deep-chat-react` package and define the element tag as `DeepChat`.
+
+<img src={vueLogo} width="28" style={{float: 'left', marginRight: '10px', marginTop: '27px'}} />
+
+## Vue
+
+Depending on your configuration, you may notice a _"Failed to resolve component..."_ warning in the console. This can be fixed by configuring Vue to work with web components.
+
+<img src={svelteLogo} width="23" style={{float: 'left', marginRight: '13px', marginTop: '25px'}} />
+
+## Svelte
+
+The Svelte browser app should work right out of the box. The SvelteKit implementation requires the component to be imported using `onMount` and
+`deep-chat` to be rendered when it has loaded.
+
+<img src={angularLogo} width="36" style={{float: 'left', marginRight: '9px', marginTop: '22px'}} />
+
+## Angular
+
+Please add the `CUSTOM_ELEMENTS_SCHEMA` into your module's `schemas` array and import the component
+as `import 'deep-chat';`.
+
+<img src={solidLogo} width="28" style={{float: 'left', marginRight: '12px', marginTop: '25px'}} />
+
+## Solid
+
+Make sure to declare a `solid-js` module when working with TypeScript and use hyphen-case syntax for properties that are accessed directly through markup.
+
+<img src={nextLogo} width="28" style={{float: 'left', marginRight: '12px', marginTop: '25px'}} />
+
+## Next
+
+Use the `deep-chat-react` package and lazy load it using Next's `dynamic` extension. <br />
+When using [App Router](https://nextjs.org/docs/app) - make sure to set `"use client"` at the top of your file.
+
+<img src={nuxtLogo} width="32" style={{float: 'left', marginRight: '10px', marginTop: '27px'}} />
+
+## Nuxt
+
+Make sure to import `deep-chat` dynamically using `await import` along with the `process.client` check.
+
+<img src={vanillaJSLogo} width="28" style={{float: 'left', marginRight: '12px', marginTop: '25px'}} />
+
+## Vanilla JS
+
+You can set values via properties (recommended) or attributes. This can also be used as a fallback approach for other frameworks.
